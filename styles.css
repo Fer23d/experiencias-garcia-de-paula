@@ -802,13 +802,14 @@ figcaption {
 }
 
 .footer {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(160px, 1fr) auto minmax(260px, 1fr);
   align-items: center;
-  justify-content: space-between;
   gap: 24px;
   padding: 36px var(--gutter);
   border-top: 1px solid var(--border);
-  color: var(--ink-500);
+  background: var(--paper-100);
+  color: var(--vinho-500);
   font-size: .86rem;
 }
 
@@ -824,8 +825,14 @@ figcaption {
 .footer-links {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 16px 24px;
+}
+
+.footer-info {
+  color: var(--vinho-500);
+  text-align: right;
 }
 
 .legal-page {
@@ -1043,11 +1050,18 @@ figcaption {
   }
 
   .footer {
-    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
   }
 
   .footer-links {
-    display: grid;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-info {
+    text-align: center;
   }
 
   .cookie-banner {
