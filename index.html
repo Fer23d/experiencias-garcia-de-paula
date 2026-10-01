@@ -176,14 +176,81 @@
       </div>
     </section>
 
-    <section class="reservation" id="reserva" aria-labelledby="reserva-title">
-      <img src="assets/photos/vines-peak-landscape.jpg" alt="Paisagem de vinhedos com montanhas ao fundo">
-      <div class="reservation-copy">
-        <img class="reservation-mark" src="assets/logo-symbol-vinho.png" alt="" aria-hidden="true">
-        <p class="eyebrow">Planeje sua visita</p>
-        <h2 id="reserva-title">Escolha seu tempo na Serra. A gente ajuda a desenhar o caminho.</h2>
-        <p>Conte quantas pessoas vêm, quando pretende viajar e quanto tempo quer permanecer. A equipe Garcia de Paula retorna com o melhor roteiro disponível.</p>
-        <a class="button wine" href="https://wa.me/5531998689661?text=Ol%C3%A1!%20Estou%20planejando%20uma%20visita%20%C3%A0%20Garcia%20de%20Paula%20e%20gostaria%20de%20ajuda%20para%20escolher%20uma%20experi%C3%AAncia." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+    <section class="planning-contact" id="reserva" aria-labelledby="planning-title">
+      <div class="planning-grid">
+        <div class="planning-copy">
+          <p class="eyebrow">Planejamento e contato</p>
+          <h2 id="planning-title">Ainda não sabe qual experiência escolher?</h2>
+          <p>Conte para nós quanto tempo você tem, quando pretende vir e quem vem com você. A equipe Garcia de Paula ajuda a desenhar o melhor caminho para viver a Serra no seu ritmo.</p>
+          <a class="button wine" href="#planning-form">Planejar minha experiência</a>
+        </div>
+
+        <div class="planning-form-card">
+          <form id="planning-form" class="planning-form">
+            <div class="form-field form-field-full">
+              <label for="experience">Experiência</label>
+              <select id="experience" name="experience" required>
+                <option value="" selected disabled>Selecione uma opção</option>
+                <option value="Experiência Garcia de Paula">Experiência Garcia de Paula</option>
+                <option value="Signature Day">Signature Day</option>
+                <option value="Viva a Serra sem pressa">Viva a Serra sem pressa</option>
+                <option value="Ainda não sei">Ainda não sei</option>
+              </select>
+            </div>
+
+            <div class="form-field form-field-full">
+              <label for="fullName">Nome completo</label>
+              <input id="fullName" name="fullName" type="text" autocomplete="name" required>
+            </div>
+
+            <div class="form-field">
+              <label for="email">E-mail</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+
+            <div class="form-field">
+              <label for="whatsapp">WhatsApp</label>
+              <input id="whatsapp" name="whatsapp" type="tel" autocomplete="tel" required>
+            </div>
+
+            <div class="form-field">
+              <label for="people">Pessoas</label>
+              <select id="people" name="people" required>
+                <option value="" selected disabled>Selecione</option>
+                <option value="1 pessoa">1 pessoa</option>
+                <option value="2 pessoas">2 pessoas</option>
+                <option value="3 pessoas">3 pessoas</option>
+                <option value="4 pessoas">4 pessoas</option>
+                <option value="5 pessoas">5 pessoas</option>
+                <option value="6 pessoas ou mais">6 pessoas ou mais</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="when">Quando pretende vir</label>
+              <input id="when" name="when" type="text" placeholder="Ex.: outubro, fim de semana..." required>
+            </div>
+
+            <div class="form-field form-field-full">
+              <label for="stayTime">Tempo na região</label>
+              <select id="stayTime" name="stayTime" required>
+                <option value="" selected disabled>Selecione uma opção</option>
+                <option value="Algumas horas">Algumas horas</option>
+                <option value="Um dia">Um dia</option>
+                <option value="Uma noite">Uma noite</option>
+                <option value="Um fim de semana">Um fim de semana</option>
+                <option value="Mais de duas noites">Mais de duas noites</option>
+              </select>
+            </div>
+
+            <label class="form-check">
+              <input id="ageConfirm" name="ageConfirm" type="checkbox" required>
+              <span>Confirmo que todos os visitantes têm 18 anos ou mais.</span>
+            </label>
+
+            <button class="button outline-wine form-submit" type="submit">Enviar pelo WhatsApp</button>
+          </form>
+        </div>
       </div>
     </section>
   </main>
@@ -193,5 +260,30 @@
     <p>Experiências Garcia de Paula | Serra da Ibitipoca - Minas Gerais</p>
     <a href="#topo">Voltar ao topo</a>
   </footer>
+  <script>
+    document.getElementById("planning-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const form = e.currentTarget;
+      if (!form.reportValidity()) return;
+
+      const data = new FormData(form);
+      const lines = [
+        "Olá! Gostaria de planejar uma experiência Garcia de Paula.",
+        "",
+        "Experiência: " + data.get("experience"),
+        "Nome completo: " + data.get("fullName"),
+        "E-mail: " + data.get("email"),
+        "WhatsApp: " + data.get("whatsapp"),
+        "Pessoas: " + data.get("people"),
+        "Quando pretende vir: " + data.get("when"),
+        "Tempo na região: " + data.get("stayTime"),
+        "18 anos ou mais: " + (data.get("ageConfirm") ? "Sim" : "Não")
+      ];
+
+      const url = "https://wa.me/5532900000000?text=" + encodeURIComponent(lines.join("\n"));
+      window.open(url, "_blank", "noopener");
+    });
+  </script>
 </body>
 </html>

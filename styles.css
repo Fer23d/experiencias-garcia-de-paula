@@ -239,6 +239,12 @@ h3 {
   color: var(--paper-100);
 }
 
+.button.outline-wine {
+  background: transparent;
+  border-color: var(--vinho-500);
+  color: var(--vinho-500);
+}
+
 .button:hover {
   background: var(--vinho-800);
   border-color: var(--vinho-800);
@@ -447,34 +453,117 @@ figcaption {
   margin-inline: auto;
 }
 
-.reservation {
-  width: min(100% - calc(var(--gutter) * 2), var(--max));
-  margin: clamp(78px, 12vw, 132px) auto;
+.planning-contact {
+  background: var(--paper-200);
+  padding: clamp(72px, 11vw, 128px) var(--gutter);
+}
+
+.planning-grid {
+  width: min(100%, var(--max));
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, .95fr) minmax(320px, .75fr);
+  grid-template-columns: minmax(0, .78fr) minmax(360px, 1fr);
+  gap: clamp(40px, 7vw, 96px);
+  align-items: center;
+}
+
+.planning-copy {
+  max-width: 520px;
+}
+
+.planning-copy h2 {
+  margin-top: 18px;
+  max-width: 11ch;
+  font-size: clamp(2.65rem, 5.6vw, 5rem);
+}
+
+.planning-copy p:not(.eyebrow) {
+  margin-top: 22px;
+  font-size: clamp(1.05rem, 1.5vw, 1.18rem);
+}
+
+.planning-copy .button {
+  margin-top: 34px;
+}
+
+.planning-form-card {
   background: var(--paper-000);
-  border: 1px solid var(--border);
+  padding: clamp(28px, 5vw, 56px);
 }
 
-.reservation > img {
+.planning-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px 24px;
+}
+
+.form-field,
+.form-check,
+.form-submit {
+  min-width: 0;
+}
+
+.form-field-full,
+.form-check,
+.form-submit {
+  grid-column: 1 / -1;
+}
+
+.form-field label {
+  display: block;
+  color: var(--ink-500);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.form-field input,
+.form-field select {
   width: 100%;
-  height: 100%;
-  min-height: 520px;
-  object-fit: cover;
+  margin-top: 8px;
+  padding: 11px 0 10px;
+  border: 0;
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink-800);
+  font: 500 1rem/1.5 "Rizoma", Georgia, serif;
+  outline: 0;
 }
 
-.reservation-copy {
-  padding: clamp(42px, 7vw, 76px);
-  align-self: center;
+.form-field input::placeholder {
+  color: rgba(90, 83, 80, .58);
 }
 
-.reservation-mark {
-  width: 48px;
-  margin-bottom: 28px;
+.form-field input:focus,
+.form-field select:focus {
+  border-color: var(--vinho-500);
 }
 
-.reservation-copy .button {
-  margin-top: 30px;
+.form-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--ink-500);
+  font-size: .95rem;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.form-check input {
+  width: 18px;
+  height: 18px;
+  margin: 2px 0 0;
+  accent-color: var(--vinho-500);
+  flex: 0 0 auto;
+}
+
+.form-submit {
+  justify-self: start;
+  margin-top: 4px;
 }
 
 .footer {
@@ -513,12 +602,11 @@ figcaption {
   .intro,
   .feature-band,
   .split-story,
-  .reservation {
+  .planning-grid {
     grid-template-columns: 1fr;
   }
 
-  .feature-media img,
-  .reservation > img {
+  .feature-media img {
     min-height: 360px;
   }
 
@@ -531,10 +619,8 @@ figcaption {
     grid-template-columns: 1fr;
   }
 
-  .reservation {
-    width: 100%;
-    margin-bottom: 0;
-    border-inline: 0;
+  .planning-copy {
+    max-width: 760px;
   }
 }
 
@@ -567,6 +653,22 @@ figcaption {
   .hero-actions,
   .button {
     width: 100%;
+  }
+
+  .planning-contact {
+    padding-inline: 20px;
+  }
+
+  .planning-form {
+    grid-template-columns: 1fr;
+  }
+
+  .planning-form-card {
+    padding: 28px 20px;
+  }
+
+  .form-submit {
+    justify-self: stretch;
   }
 
   .stats {
