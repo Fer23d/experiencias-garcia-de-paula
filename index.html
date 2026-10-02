@@ -7,6 +7,7 @@
   <meta name="description" content="Experiências Garcia de Paula na Serra da Ibitipoca: vinho, território, hospedagem e gastronomia em Minas Gerais.">
   <link rel="icon" type="image/png" href="assets/logo-symbol-vinho.png">
   <link rel="preload" href="assets/fonts/RizomaS-ExtraLight.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -359,8 +360,8 @@
             </div>
 
             <div class="form-field">
-              <label for="when">Quando pretende vir</label>
-              <input id="when" name="when" type="text" placeholder="Ex.: outubro, fim de semana..." required>
+              <label for="data">Quando pretende vir</label>
+              <input id="data" name="data" type="text" placeholder="Escolha uma data" autocomplete="off" required>
             </div>
 
             <div class="form-field form-field-full">
@@ -402,7 +403,17 @@
     <button class="cookie-button" id="cookie-accept" type="button">Aceitar e Continuar</button>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/pt.js"></script>
   <script>
+    if (window.flatpickr) {
+      flatpickr("#data", {
+        locale: "pt",
+        minDate: "today",
+        dateFormat: "d/m/Y"
+      });
+    }
+
     const experienceHashMap = {
       "experiencia-garcia-de-paula": "horas",
       "signature-day": "dia",
@@ -498,7 +509,7 @@
         "E-mail: " + data.get("email"),
         "WhatsApp: " + data.get("whatsapp"),
         "Pessoas: " + data.get("people"),
-        "Quando pretende vir: " + data.get("when"),
+        "Quando pretende vir: " + data.get("data"),
         "Tempo na região: " + data.get("stayTime"),
         "18 anos ou mais: " + (data.get("ageConfirm") ? "Sim" : "Não")
       ];
