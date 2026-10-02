@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A colheita da safra 2026: Altitude e Elegância | Garcia de Paula</title>
+  <meta name="description" content="Um olhar editorial sobre a colheita da safra 2026 da Garcia de Paula na Serra da Ibitipoca.">
+  <link rel="icon" type="image/png" href="assets/logo-symbol-vinho.png">
+  <link rel="preload" href="assets/fonts/RizomaS-ExtraLight.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="no-hero-page">
+  <header class="site-header is-scrolled" id="site-header">
+    <nav class="nav" aria-label="Principal">
+      <a class="brand" href="index.html" aria-label="Garcia de Paula">
+        <img class="brand-logo brand-logo-light" src="assets/logo-full-branca.png" alt="Garcia de Paula">
+        <img class="brand-logo brand-logo-wine" src="assets/logo-full-vinho.png" alt="">
+      </a>
+      <div class="nav-links">
+        <a href="sobre.html">Sobre nós</a>
+        <a href="experiencias.html">Experiências</a>
+        <a href="vinhos.html">Nossos vinhos</a>
+        <a href="novidades.html">Novidades</a>
+        <a href="index.html#reserva">Contatos</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="topo" class="article-page">
+    <article class="article-layout">
+      <header class="article-header">
+        <time datetime="2026-10-15">15 OUTUBRO 2026</time>
+        <h1>A colheita da safra 2026: Altitude e Elegância</h1>
+      </header>
+
+      <figure class="article-hero-image">
+        <img src="assets/photos/grapes-cluster-backlit.jpg" alt="Cacho de uvas iluminado pelo sol no vinhedo">
+      </figure>
+
+      <div class="article-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet sapien sed urna viverra facilisis. Na altitude da Serra da Ibitipoca, o tempo parece trabalhar em outra cadência, permitindo que cada parcela amadureça com precisão, frescor e uma expressão muito particular do solo.</p>
+
+        <p>Praesent finibus, massa sed fermentum hendrerit, nibh mi gravida lectus, in gravida elit nunc vitae velit. A colheita da safra 2026 reuniu noites frias, dias luminosos e uma seleção manual rigorosa, preservando o caráter elegante que orienta os vinhos Garcia de Paula desde a vinha.</p>
+
+        <blockquote>
+          A altitude não apressa o vinho. Ela ensina a esperar pelo instante exato em que frescor, textura e perfume chegam ao mesmo ponto.
+        </blockquote>
+
+        <p>Morbi vitae ante vitae velit convallis posuere. Suspendisse potenti. Sed elementum, lectus at tempor aliquam, justo urna gravida orci, at feugiat erat augue non magna. Em cada cacho, a equipe buscou equilíbrio: concentração sem excesso, maturidade sem peso e uma assinatura aromática capaz de traduzir a paisagem.</p>
+
+        <p>Curabitur dignissim nunc id arcu tempor, eu viverra velit faucibus. Nulla facilisi. A safra 2026 nasce com vocação gastronômica, marcada por taninos finos, acidez vibrante e uma elegância silenciosa, própria dos vinhos cultivados em altitude e conduzidos com atenção artesanal.</p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <img src="assets/logo-full-vinho.png" alt="Garcia de Paula">
+    <nav class="footer-links" aria-label="Links legais">
+      <a href="privacidade.html">Política de Privacidade</a>
+      <a href="termos.html">Termos de Uso</a>
+      <a href="#topo">Voltar ao topo</a>
+    </nav>
+    <p class="footer-info">Experiências Garcia de Paula | Serra da Ibitipoca - Minas Gerais</p>
+  </footer>
+
+  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
+    <p>Utilizamos cookies para oferecer a melhor experiência em enoturismo de luxo e personalizar nossos anúncios. Ao continuar navegando, você concorda com nossa <a href="privacidade.html">Política de Privacidade</a>.</p>
+    <button class="cookie-button" id="cookie-accept" type="button">Aceitar e Continuar</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/pt.js"></script>
+  <script>
+    const siteHeader = document.getElementById("site-header");
+    function updateSiteHeader() {
+      if (!siteHeader) return;
+      siteHeader.classList.toggle("is-scrolled", document.body.classList.contains("no-hero-page") || window.scrollY > 24);
+    }
+
+    updateSiteHeader();
+    window.addEventListener("scroll", updateSiteHeader, { passive: true });
+
+    if (window.flatpickr && document.querySelector("#data")) {
+      flatpickr("#data", {
+        locale: "pt",
+        minDate: "today",
+        dateFormat: "d/m/Y"
+      });
+    }
+
+    const cookieBanner = document.getElementById("cookie-banner");
+    const cookieAccept = document.getElementById("cookie-accept");
+
+    if (cookieBanner && cookieAccept && localStorage.getItem("gdp-cookie-consent") !== "accepted") {
+      cookieBanner.classList.add("is-visible");
+    }
+
+    if (cookieAccept && cookieBanner) {
+      cookieAccept.addEventListener("click", function () {
+        localStorage.setItem("gdp-cookie-consent", "accepted");
+        cookieBanner.classList.add("is-hiding");
+
+        window.setTimeout(function () {
+          cookieBanner.classList.remove("is-visible");
+          cookieBanner.classList.remove("is-hiding");
+        }, 320);
+      });
+    }
+  </script>
+</body>
+</html>

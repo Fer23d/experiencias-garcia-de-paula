@@ -1066,6 +1066,70 @@ figcaption {
   border-color: var(--vinho-500);
 }
 
+.article-page {
+  background: var(--paper-100);
+}
+
+.article-layout {
+  padding: clamp(142px, 16vw, 190px) var(--gutter) clamp(82px, 11vw, 128px);
+}
+
+.article-header {
+  width: min(100%, 980px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.article-header time {
+  color: var(--vinho-500);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  line-height: 1.45;
+}
+
+.article-header h1 {
+  max-width: 12ch;
+  margin: 18px auto 0;
+  color: var(--vinho-900);
+  font-size: clamp(3.15rem, 7vw, 6.6rem);
+  line-height: .94;
+}
+
+.article-hero-image {
+  width: min(100%, var(--max));
+  margin: clamp(42px, 7vw, 78px) auto 0;
+}
+
+.article-hero-image img {
+  width: 100%;
+  aspect-ratio: 16 / 8;
+  object-fit: cover;
+  background: var(--paper-200);
+}
+
+.article-body {
+  max-width: 680px;
+  margin: clamp(44px, 7vw, 76px) auto 0;
+  color: var(--ink-700);
+  font-size: clamp(1.05rem, 1.5vw, 1.18rem);
+  line-height: 1.8;
+}
+
+.article-body p + p {
+  margin-top: 24px;
+}
+
+.article-body blockquote {
+  margin: clamp(34px, 6vw, 54px) 0;
+  padding: 10px 0 10px clamp(22px, 4vw, 34px);
+  border-left: 1px solid var(--vinho-500);
+  color: var(--vinho-900);
+  font-size: clamp(1.55rem, 3vw, 2.25rem);
+  line-height: 1.28;
+}
+
 .planning-contact {
   background: var(--paper-200);
   padding: clamp(72px, 11vw, 128px) var(--gutter);
