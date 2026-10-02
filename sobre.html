@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Experiências Garcia de Paula | Serra da Ibitipoca</title>
-  <meta name="description" content="Experiências Garcia de Paula na Serra da Ibitipoca: vinho, território, hospedagem e gastronomia em Minas Gerais.">
+  <title>Sobre nós | Experiências Garcia de Paula</title>
+  <meta name="description" content="Conheça a essência da Garcia de Paula na Serra da Ibitipoca.">
   <link rel="icon" type="image/png" href="assets/logo-symbol-vinho.png">
   <link rel="preload" href="assets/fonts/RizomaS-ExtraLight.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <header class="site-header" id="site-header">
+<body class="no-hero-page">
+  <header class="site-header is-scrolled" id="site-header">
     <nav class="nav" aria-label="Principal">
       <a class="brand" href="index.html" aria-label="Garcia de Paula">
         <img class="brand-logo brand-logo-light" src="assets/logo-full-branca.png" alt="Garcia de Paula">
@@ -27,122 +27,16 @@
     </nav>
   </header>
 
-<section class="hero" id="topo">
-    <img class="hero-image" src="assets/photos/estate-drone-peak-wide.jpg" alt="Vinhedos Garcia de Paula vistos do alto, com a Serra ao fundo">
-    <div class="hero-shade"></div>
-    <div class="hero-content">
-      <p class="eyebrow light">Lima Duarte / Serra da Ibitipoca - MG</p>
-      <h1>Experiências Garcia de Paula</h1>
-      <p class="signature">Serra do Ibitipoca</p>
-      <p class="hero-lead">Vinho, território e uma nova forma de viver a Serra. Da visita ao vinhedo a uma estadia sem pressa, cada roteiro aproxima pessoas, paisagem e história.</p>
-      <div class="hero-actions">
-        <a class="button light" href="experiencias.html">Descobrir experiências</a>
-        <a class="button ghost-light" href="#reserva">Planejar minha visita</a>
+  <main id="topo">
+    <section class="section about-section" id="sobre" aria-labelledby="sobre-title">
+      <div class="about-media">
+        <img src="assets/photos/hillside-block-peak.jpg" alt="Vinhedo Garcia de Paula aos pés da Serra da Ibitipoca">
       </div>
-    </div>
-  </section>
-
-  <main>
-    <section class="home-gateway" aria-labelledby="home-gateway-title">
-      <div class="home-gateway-inner">
-        <p class="eyebrow">Explore o universo Garcia de Paula</p>
-        <h2 id="home-gateway-title">Escolha seu caminho pela Serra.</h2>
-        <div class="gateway-grid">
-          <a class="gateway-link" href="sobre.html">
-            <span>01</span>
-            <strong>Conhecer a Garcia de Paula</strong>
-          </a>
-          <a class="gateway-link" href="experiencias.html">
-            <span>02</span>
-            <strong>Ver experiências</strong>
-          </a>
-          <a class="gateway-link" href="vinhos.html">
-            <span>03</span>
-            <strong>Nossos vinhos</strong>
-          </a>
-          <a class="gateway-link" href="novidades.html">
-            <span>04</span>
-            <strong>Últimas novidades</strong>
-          </a>
-        </div>
-      </div>
-    </section>
-
-<section class="planning-contact" id="reserva" aria-labelledby="planning-title">
-      <div class="planning-grid">
-        <div class="planning-copy">
-          <p class="eyebrow">Planejamento e contato</p>
-          <h2 id="planning-title">Ainda não sabe qual experiência escolher?</h2>
-          <p>Conte para nós quanto tempo você tem, quando pretende vir e quem vem com você. A equipe Garcia de Paula ajuda a desenhar o melhor caminho para viver a Serra no seu ritmo.</p>
-          <a class="button wine" href="#planning-form">Planejar minha experiência</a>
-        </div>
-
-        <div class="planning-form-card">
-          <form id="planning-form" class="planning-form">
-            <div class="form-field form-field-full">
-              <label for="experience">Experiência</label>
-              <select id="experience" name="experience" required>
-                <option value="" selected disabled>Selecione uma opção</option>
-                <option value="Experiência Garcia de Paula">Experiência Garcia de Paula</option>
-                <option value="Dia especial">Dia especial</option>
-                <option value="Viva a Serra sem pressa">Viva a Serra sem pressa</option>
-                <option value="Ainda não sei">Ainda não sei</option>
-              </select>
-            </div>
-
-            <div class="form-field form-field-full">
-              <label for="fullName">Nome completo</label>
-              <input id="fullName" name="fullName" type="text" autocomplete="name" required>
-            </div>
-
-            <div class="form-field">
-              <label for="email">E-mail</label>
-              <input id="email" name="email" type="email" autocomplete="email" required>
-            </div>
-
-            <div class="form-field">
-              <label for="whatsapp">WhatsApp</label>
-              <input id="whatsapp" name="whatsapp" type="tel" autocomplete="tel" required>
-            </div>
-
-            <div class="form-field">
-              <label for="people">Pessoas</label>
-              <select id="people" name="people" required>
-                <option value="" selected disabled>Selecione</option>
-                <option value="1 pessoa">1 pessoa</option>
-                <option value="2 pessoas">2 pessoas</option>
-                <option value="3 pessoas">3 pessoas</option>
-                <option value="4 pessoas">4 pessoas</option>
-                <option value="5 pessoas">5 pessoas</option>
-                <option value="6 pessoas ou mais">6 pessoas ou mais</option>
-              </select>
-            </div>
-
-            <div class="form-field">
-              <label for="data">Quando pretende vir</label>
-              <input id="data" name="data" type="text" placeholder="Escolha uma data" autocomplete="off" required>
-            </div>
-
-            <div class="form-field form-field-full">
-              <label for="stayTime">Tempo na região</label>
-              <select id="stayTime" name="stayTime" required>
-                <option value="" selected disabled>Selecione uma opção</option>
-                <option value="Algumas horas">Algumas horas</option>
-                <option value="Um dia">Um dia</option>
-                <option value="Uma noite">Uma noite</option>
-                <option value="Um fim de semana">Um fim de semana</option>
-                <option value="Mais de duas noites">Mais de duas noites</option>
-              </select>
-            </div>
-
-            <label class="form-check">
-              <input id="ageConfirm" name="ageConfirm" type="checkbox" required>
-              <span>Confirmo que todos os visitantes têm 18 anos ou mais.</span>
-            </label>
-
-            <button class="button outline-wine form-submit" type="submit">Enviar pelo WhatsApp</button>
-          </form>
-        </div>
+      <div class="about-copy">
+        <p class="eyebrow">Sobre nós</p>
+        <h2 id="sobre-title">Sobre a Garcia de Paula</h2>
+        <p>Na altitude da Serra da Ibitipoca, a Garcia de Paula nasce do encontro entre família, paisagem e tempo, revelando vinhos que carregam a delicadeza do clima de montanha.</p>
+        <p>Entre solos minerais, colheita de inverno e dias luminosos, o nosso terroir convida a experiências silenciosas, precisas e profundamente ligadas ao território mineiro.</p>
       </div>
     </section>
   </main>

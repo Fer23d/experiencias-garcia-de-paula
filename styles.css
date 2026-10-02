@@ -765,6 +765,70 @@ figcaption {
   margin-inline: auto;
 }
 
+.no-hero-page main {
+  padding-top: clamp(86px, 10vw, 112px);
+}
+
+.home-gateway {
+  background: var(--paper-100);
+  padding: clamp(72px, 10vw, 116px) var(--gutter);
+}
+
+.home-gateway-inner {
+  width: min(100%, var(--max));
+  margin: 0 auto;
+}
+
+.home-gateway h2 {
+  margin-top: 14px;
+  max-width: 760px;
+}
+
+.gateway-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: clamp(34px, 6vw, 64px);
+  background: var(--border);
+}
+
+.gateway-link {
+  display: flex;
+  min-height: 220px;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+  padding: clamp(22px, 3vw, 34px);
+  background: var(--paper-100);
+  color: var(--vinho-500);
+  transition: background-color .24s ease, color .24s ease;
+}
+
+.gateway-link span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+}
+
+.gateway-link strong {
+  max-width: 12ch;
+  color: var(--ink-800);
+  font-size: clamp(1.35rem, 2.4vw, 1.85rem);
+  font-weight: 200;
+  line-height: 1.15;
+  transition: color .24s ease;
+}
+
+.gateway-link:hover {
+  background: var(--vinho-500);
+  color: var(--paper-100);
+}
+
+.gateway-link:hover strong {
+  color: var(--paper-100);
+}
+
 .journal-section {
   width: 100%;
   max-width: none;
@@ -1246,6 +1310,10 @@ figcaption {
     grid-template-columns: 1fr;
   }
 
+  .gateway-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .detail-footer {
     grid-template-columns: 1fr;
   }
@@ -1295,6 +1363,14 @@ figcaption {
 
   .journal-section {
     padding-inline: 20px;
+  }
+
+  .gateway-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gateway-link {
+    min-height: 150px;
   }
 
   .hero-actions,
