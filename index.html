@@ -11,19 +11,23 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="hero" id="topo">
+  <header class="site-header" id="site-header">
     <nav class="nav" aria-label="Principal">
       <a class="brand" href="#topo" aria-label="Garcia de Paula">
-        <img src="assets/logo-full-branca.png" alt="Garcia de Paula">
+        <img class="brand-logo brand-logo-light" src="assets/logo-full-branca.png" alt="Garcia de Paula">
+        <img class="brand-logo brand-logo-wine" src="assets/logo-full-vinho.png" alt="">
       </a>
       <div class="nav-links">
+        <a href="#sobre">Sobre Nós</a>
         <a href="#experiencias">Experiências</a>
-        <a href="#territorio">Território</a>
-        <a href="#estadias">Estadias</a>
-        <a href="#reserva">Planejar visita</a>
+        <a href="#vinhos">Nossos Vinhos</a>
+        <a href="#novidades">Novidades</a>
+        <a href="#reserva">Contactos</a>
       </div>
     </nav>
+  </header>
 
+  <section class="hero" id="topo">
     <img class="hero-image" src="assets/photos/estate-drone-peak-wide.jpg" alt="Vinhedos Garcia de Paula vistos do alto, com a Serra ao fundo">
     <div class="hero-shade"></div>
     <div class="hero-content">
@@ -36,9 +40,21 @@
         <a class="button ghost-light" href="#reserva">Planejar minha visita</a>
       </div>
     </div>
-  </header>
+  </section>
 
   <main>
+    <section class="section about-section" id="sobre" aria-labelledby="sobre-title">
+      <div class="about-media">
+        <img src="assets/photos/hillside-block-peak.jpg" alt="Vinhedo Garcia de Paula aos pés da Serra da Ibitipoca">
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow">Sobre Nós</p>
+        <h2 id="sobre-title">Sobre a Garcia de Paula</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Na altitude da Serra da Ibitipoca, a Garcia de Paula nasce do encontro entre família, paisagem e tempo, revelando vinhos que carregam a delicadeza do clima de montanha.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Entre solos minerais, colheita de inverno e dias luminosos, o nosso terroir convida a experiências silenciosas, precisas e profundamente ligadas ao território mineiro.</p>
+      </div>
+    </section>
+
     <section class="section intro" aria-labelledby="intro-title">
       <div class="section-kicker">
         <p class="eyebrow">O convite</p>
@@ -309,6 +325,45 @@
       </div>
     </section>
 
+    <section class="section journal-section" id="novidades" aria-labelledby="novidades-title">
+      <div class="journal-heading">
+        <p class="eyebrow">Novidades</p>
+        <h2 id="novidades-title">Journal</h2>
+      </div>
+      <div class="blog-grid">
+        <article class="blog-card">
+          <a href="#reserva" aria-label="Ler artigo sobre a colheita da safra 2026">
+            <span class="blog-image">
+              <img src="assets/photos/grapes-cluster-backlit.jpg" alt="Cacho de uvas iluminado pelo sol no vinhedo">
+            </span>
+            <span class="blog-date">15 OUTUBRO 2026</span>
+            <h3>A colheita da safra 2026: Altitude e Elegância</h3>
+            <span class="blog-link">Ler artigo -&gt;</span>
+          </a>
+        </article>
+        <article class="blog-card">
+          <a href="#reserva" aria-label="Ler artigo sobre experiências na Serra da Ibitipoca">
+            <span class="blog-image">
+              <img src="assets/photos/ibiti-estatuas-por-do-sol.jpeg" alt="Pôr do sol na Serra da Ibitipoca">
+            </span>
+            <span class="blog-date">22 OUTUBRO 2026</span>
+            <h3>Um dia na Serra: vinho, paisagem e mesa mineira</h3>
+            <span class="blog-link">Ler artigo -&gt;</span>
+          </a>
+        </article>
+        <article class="blog-card">
+          <a href="#reserva" aria-label="Ler artigo sobre hospedagem e roteiro na região">
+            <span class="blog-image">
+              <img src="assets/photos/casa-da-montanha-rancharia.jpg" alt="Casa da Montanha em Rancharia">
+            </span>
+            <span class="blog-date">05 NOVEMBRO 2026</span>
+            <h3>Hospedar-se sem pressa: um roteiro para viver o território</h3>
+            <span class="blog-link">Ler artigo -&gt;</span>
+          </a>
+        </article>
+      </div>
+    </section>
+
     <section class="planning-contact" id="reserva" aria-labelledby="planning-title">
       <div class="planning-grid">
         <div class="planning-copy">
@@ -406,6 +461,15 @@
   <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/pt.js"></script>
   <script>
+    const siteHeader = document.getElementById("site-header");
+    function updateSiteHeader() {
+      if (!siteHeader) return;
+      siteHeader.classList.toggle("is-scrolled", window.scrollY > 24);
+    }
+
+    updateSiteHeader();
+    window.addEventListener("scroll", updateSiteHeader, { passive: true });
+
     if (window.flatpickr) {
       flatpickr("#data", {
         locale: "pt",
