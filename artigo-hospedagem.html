@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hospedar-se sem pressa: um roteiro para viver o território | Garcia de Paula</title>
+  <meta name="description" content="Um roteiro editorial para viver a Serra da Ibitipoca com hospedagem, paisagem e tempo de qualidade.">
+  <link rel="icon" type="image/png" href="assets/logo-symbol-vinho.png">
+  <link rel="preload" href="assets/fonts/RizomaS-ExtraLight.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="no-hero-page">
+  <header class="site-header is-scrolled" id="site-header">
+    <nav class="nav" aria-label="Principal">
+      <a class="brand" href="index.html" aria-label="Garcia de Paula">
+        <img class="brand-logo brand-logo-light" src="assets/logo-full-branca.png" alt="Garcia de Paula">
+        <img class="brand-logo brand-logo-wine" src="assets/logo-full-vinho.png" alt="">
+      </a>
+      <div class="nav-links">
+        <a href="sobre.html">Sobre nós</a>
+        <a href="experiencias.html">Experiências</a>
+        <a href="vinhos.html">Nossos vinhos</a>
+        <a href="novidades.html">Novidades</a>
+        <a href="index.html#reserva">Contatos</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="topo" class="article-page">
+    <article class="article-layout">
+      <header class="article-header">
+        <time datetime="2026-11-05">05 NOVEMBRO 2026</time>
+        <h1>Hospedar-se sem pressa: um roteiro para viver o território</h1>
+      </header>
+
+      <figure class="article-hero-image">
+        <img src="assets/photos/casa-da-montanha-rancharia.jpg" alt="Casa da Montanha em Rancharia">
+      </figure>
+
+      <div class="article-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet sapien sed urna viverra facilisis. Quando a visita se transforma em estadia, a Serra da Ibitipoca revela camadas mais silenciosas: a luz da manhã, o ar frio e a sensação de pertencer por alguns dias ao ritmo do lugar.</p>
+
+        <p>Praesent finibus, massa sed fermentum hendrerit, nibh mi gravida lectus, in gravida elit nunc vitae velit. As casas da região convidam a uma experiência mais íntima, em que arquitetura, natureza e mesa se encontram sem pressa, compondo um roteiro de descanso sofisticado.</p>
+
+        <blockquote>
+          Hospedar-se bem é permitir que o território deixe de ser cenário e passe a ser parte da experiência.
+        </blockquote>
+
+        <p>Morbi vitae ante vitae velit convallis posuere. Suspendisse potenti. Sed elementum, lectus at tempor aliquam, justo urna gravida orci, at feugiat erat augue non magna. Entre uma visita à vinícola e uma mesa preparada com produtos locais, o tempo ganha outra textura, mais ampla e sensorial.</p>
+
+        <p>Curabitur dignissim nunc id arcu tempor, eu viverra velit faucibus. Nulla facilisi. O roteiro ideal combina privacidade, natureza e encontros bem desenhados, criando uma permanência que valoriza tanto o vinho quanto a paisagem que o cerca.</p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <img src="assets/logo-full-vinho.png" alt="Garcia de Paula">
+    <nav class="footer-links" aria-label="Links legais">
+      <a href="privacidade.html">Política de Privacidade</a>
+      <a href="termos.html">Termos de Uso</a>
+      <a href="#topo">Voltar ao topo</a>
+    </nav>
+    <p class="footer-info">Experiências Garcia de Paula | Serra da Ibitipoca - Minas Gerais</p>
+  </footer>
+
+  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
+    <p>Utilizamos cookies para oferecer a melhor experiência em enoturismo de luxo e personalizar nossos anúncios. Ao continuar navegando, você concorda com nossa <a href="privacidade.html">Política de Privacidade</a>.</p>
+    <button class="cookie-button" id="cookie-accept" type="button">Aceitar e Continuar</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/pt.js"></script>
+  <script>
+    const siteHeader = document.getElementById("site-header");
+    function updateSiteHeader() {
+      if (!siteHeader) return;
+      siteHeader.classList.toggle("is-scrolled", document.body.classList.contains("no-hero-page") || window.scrollY > 24);
+    }
+
+    updateSiteHeader();
+    window.addEventListener("scroll", updateSiteHeader, { passive: true });
+
+    if (window.flatpickr && document.querySelector("#data")) {
+      flatpickr("#data", {
+        locale: "pt",
+        minDate: "today",
+        dateFormat: "d/m/Y"
+      });
+    }
+
+    const cookieBanner = document.getElementById("cookie-banner");
+    const cookieAccept = document.getElementById("cookie-accept");
+
+    if (cookieBanner && cookieAccept && localStorage.getItem("gdp-cookie-consent") !== "accepted") {
+      cookieBanner.classList.add("is-visible");
+    }
+
+    if (cookieAccept && cookieBanner) {
+      cookieAccept.addEventListener("click", function () {
+        localStorage.setItem("gdp-cookie-consent", "accepted");
+        cookieBanner.classList.add("is-hiding");
+
+        window.setTimeout(function () {
+          cookieBanner.classList.remove("is-visible");
+          cookieBanner.classList.remove("is-hiding");
+        }, 320);
+      });
+    }
+  </script>
+</body>
+</html>
