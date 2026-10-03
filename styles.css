@@ -756,8 +756,6 @@ figcaption {
 
 .wine-hero {
   min-height: 72svh;
-  display: flex;
-  align-items: center;
   padding: clamp(120px, 16vw, 180px) var(--gutter) clamp(82px, 10vw, 132px);
   background: var(--vinho-bg);
   color: var(--paper-100);
@@ -765,7 +763,15 @@ figcaption {
 
 .wine-hero-inner {
   width: min(100%, var(--max));
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(32px, 6vw, 88px);
+  align-items: center;
   margin: 0 auto;
+}
+
+.wine-hero-copy {
+  min-width: 0;
 }
 
 .wine-hero h1 {
@@ -782,6 +788,22 @@ figcaption {
   color: rgba(251, 248, 244, .82);
   font-size: clamp(1.05rem, 1.7vw, 1.35rem);
   line-height: 1.65;
+}
+
+.wine-hero-media {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background: rgba(251, 248, 244, .08);
+}
+
+.wine-hero-media img {
+  width: 100%;
+  height: min(70vh, 500px);
+  display: block;
+  object-fit: cover;
+  max-height: 70vh;
 }
 
 .wine-catalog {
@@ -1509,6 +1531,14 @@ figcaption {
   .wine-card,
   .wine-boutique-card {
     grid-template-columns: 1fr;
+  }
+
+  .wine-hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .wine-hero-media img {
+    height: min(58vh, 460px);
   }
 
   .wine-boutique-card.is-reversed .wine-boutique-copy {
