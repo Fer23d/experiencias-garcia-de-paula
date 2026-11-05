@@ -1517,6 +1517,150 @@ figcaption {
   text-transform: uppercase;
 }
 
+.newsletter-band {
+  padding: 56px var(--gutter) 40px;
+  border-top: 1px solid var(--border);
+  background: var(--paper-100);
+  color: var(--vinho-900);
+}
+
+.newsletter-inner {
+  display: grid;
+  grid-template-columns: minmax(120px, 1fr) minmax(0, 2fr);
+  align-items: center;
+  gap: 48px;
+  width: min(100%, var(--max));
+  margin: 0 auto;
+}
+
+.newsletter-socials {
+  display: flex;
+  gap: 12px;
+}
+
+.newsletter-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: var(--vinho-900);
+}
+
+.newsletter-socials a:hover {
+  color: var(--vinho-500);
+}
+
+.newsletter-copy {
+  min-width: 0;
+}
+
+.newsletter-copy h2 {
+  margin: 0 0 24px;
+  color: var(--vinho-900);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+.newsletter-fields {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 52px;
+  gap: 8px;
+  align-items: center;
+}
+
+.newsletter-field {
+  min-width: 0;
+}
+
+.newsletter-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.newsletter-field input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: 52px;
+  padding: 0 22px;
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  background: var(--paper-000);
+  color: var(--ink-800);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0;
+}
+
+.newsletter-field input::placeholder {
+  color: var(--ink-500);
+  opacity: 1;
+}
+
+.newsletter-fields button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  border: 1px solid var(--vinho-900);
+  border-radius: 50%;
+  background: var(--vinho-900);
+  color: var(--paper-000);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.newsletter-fields button:hover {
+  background: var(--vinho-500);
+  border-color: var(--vinho-500);
+}
+
+.newsletter-band :focus-visible {
+  outline: 2px solid var(--vinho-500);
+  outline-offset: 3px;
+}
+
+.newsletter-status {
+  margin-top: 12px;
+  min-height: 24px;
+  color: var(--ink-500);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .85rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .newsletter-inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .newsletter-copy h2 {
+    font-size: 1.25rem;
+  }
+
+  .newsletter-fields {
+    grid-template-columns: minmax(0, 1fr) 52px;
+  }
+
+  .newsletter-field:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
 .whatsapp-float {
   position: fixed;
   bottom: 30px;
