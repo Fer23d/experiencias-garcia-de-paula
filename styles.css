@@ -1558,7 +1558,9 @@ figcaption {
 }
 
 .contact-center-list {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 14px;
   width: fit-content;
   margin: 0 auto;
@@ -1567,9 +1569,8 @@ figcaption {
 }
 
 .contact-center-list li {
-  display: grid;
-  grid-template-columns: 22px minmax(0, 1fr);
-  align-items: start;
+  display: inline-flex;
+  align-items: center;
   gap: 12px;
   font-size: 1rem;
   line-height: 1.5;
@@ -1577,7 +1578,7 @@ figcaption {
 }
 
 .contact-center-list svg {
-  margin-top: 1px;
+  flex: 0 0 22px;
   color: var(--vinho-500);
 }
 
