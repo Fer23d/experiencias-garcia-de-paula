@@ -1526,10 +1526,10 @@ figcaption {
 
 .newsletter-inner {
   display: grid;
-  grid-template-columns: minmax(100px, .45fr) minmax(0, 1fr) minmax(0, 1.65fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: center;
   justify-items: center;
-  gap: 32px;
+  gap: 40px;
   width: min(100%, var(--max));
   margin: 0 auto;
 }
@@ -1628,7 +1628,7 @@ figcaption {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 52px;
   gap: 8px;
   align-items: center;
-  max-width: 840px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
