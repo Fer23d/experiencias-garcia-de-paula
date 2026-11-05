@@ -1528,6 +1528,7 @@ figcaption {
   display: grid;
   grid-template-columns: minmax(100px, .45fr) minmax(0, 1fr) minmax(0, 1.65fr);
   align-items: center;
+  justify-items: center;
   gap: 32px;
   width: min(100%, var(--max));
   margin: 0 auto;
@@ -1535,12 +1536,15 @@ figcaption {
 
 .footer-contact-column {
   min-width: 0;
+  width: 100%;
+  text-align: center;
 }
 
 .contact-center {
   color: var(--vinho-900);
   font-family: Arial, Helvetica, sans-serif;
   letter-spacing: 0;
+  text-align: center;
 }
 
 .contact-center h2 {
@@ -1556,7 +1560,8 @@ figcaption {
 .contact-center-list {
   display: grid;
   gap: 14px;
-  margin: 0;
+  width: fit-content;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
 }
@@ -1585,6 +1590,7 @@ figcaption {
 
 .newsletter-socials {
   display: flex;
+  justify-content: center;
   gap: 12px;
 }
 
@@ -1603,6 +1609,8 @@ figcaption {
 
 .newsletter-copy {
   min-width: 0;
+  width: 100%;
+  text-align: center;
 }
 
 .newsletter-copy h2 {
@@ -1620,6 +1628,8 @@ figcaption {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 52px;
   gap: 8px;
   align-items: center;
+  max-width: 840px;
+  margin: 0 auto;
 }
 
 .newsletter-field {
