@@ -273,5 +273,31 @@
     </svg>
   </a>
   <script src="newsletter.js" defer></script>
+  <div class="age-gate" id="age-gate" role="dialog" aria-modal="true" aria-labelledby="age-gate-title" aria-describedby="age-gate-description">
+    <div class="age-gate-card">
+      <div class="age-gate-main">
+        <img class="age-gate-logo" src="assets/logo-full-vinho.png" alt="Vinícola Garcia de Paula">
+        <div class="age-gate-prompt" id="age-gate-prompt">
+          <h1 id="age-gate-title">Você tem mais de 18 anos?</h1>
+          <div class="age-gate-actions">
+            <button class="age-gate-button outline" type="button" data-age-response="deny">Não</button>
+            <button class="age-gate-button solid" type="button" data-age-response="accept">Sim</button>
+          </div>
+        </div>
+        <div class="age-gate-denied" id="age-gate-denied" hidden>
+          <h1>Conteúdo restrito</h1>
+          <p>Este site é destinado a pessoas maiores de 18 anos.</p>
+          <button class="age-gate-button outline" type="button" data-age-response="retry">Voltar</button>
+        </div>
+      </div>
+      <div class="age-gate-notice" id="age-gate-description">
+        <p><strong>Se beber, não dirija.</strong></p>
+        <p>Não compartilhe este conteúdo com menores de 18 anos.</p>
+        <p>Acesse nossos <a href="termos.html">Termos de uso</a>.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="age-gate.js" defer></script>
 </body>
 </html>

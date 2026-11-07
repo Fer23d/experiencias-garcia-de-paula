@@ -1703,6 +1703,132 @@ figcaption {
   line-height: 1.5;
 }
 
+.age-gate {
+  position: fixed;
+  z-index: 10000;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(26, 23, 23, .78);
+  opacity: 1;
+  transition: opacity .22s ease;
+}
+
+.age-gate[hidden] {
+  display: none;
+}
+
+.age-gate.is-leaving {
+  opacity: 0;
+}
+
+.age-gate-card {
+  width: min(100%, 580px);
+  overflow: hidden;
+  border: 1px solid var(--vinho-500);
+  background: var(--paper-000);
+  color: var(--ink-800);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, .24);
+}
+
+.age-gate-main {
+  padding: clamp(32px, 6vw, 54px) clamp(24px, 6vw, 64px) clamp(30px, 5vw, 48px);
+  text-align: center;
+}
+
+.age-gate-logo {
+  width: min(100%, 220px);
+  height: auto;
+  margin: 0 auto 30px;
+}
+
+.age-gate h1 {
+  max-width: none;
+  color: var(--vinho-900);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.age-gate-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.age-gate-button {
+  min-height: 48px;
+  border: 1px solid var(--vinho-500);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .2s ease, border-color .2s ease, color .2s ease;
+}
+
+.age-gate-button.outline {
+  background: var(--paper-000);
+  color: var(--vinho-900);
+}
+
+.age-gate-button.solid {
+  background: var(--vinho-500);
+  color: var(--paper-000);
+}
+
+.age-gate-button:hover {
+  border-color: var(--vinho-800);
+  background: var(--vinho-800);
+  color: var(--paper-000);
+}
+
+.age-gate-denied p {
+  margin-top: 14px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.age-gate-denied .age-gate-button {
+  width: min(100%, 220px);
+  margin-top: 24px;
+}
+
+.age-gate-notice {
+  padding: 20px 24px 22px;
+  border-top: 1px solid var(--border);
+  background: var(--paper-200);
+  text-align: center;
+}
+
+.age-gate-notice p {
+  color: var(--ink-800);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .96rem;
+  line-height: 1.55;
+}
+
+.age-gate-notice p + p {
+  margin-top: 4px;
+}
+
+.age-gate-notice a {
+  color: var(--vinho-500);
+  border-bottom: 1px solid currentColor;
+}
+
+.age-gate :focus-visible {
+  outline: 2px solid var(--vinho-500);
+  outline-offset: 3px;
+}
+
+body.age-gate-open {
+  overflow: hidden;
+}
+
 @media (max-width: 1000px) {
   .newsletter-inner {
     grid-template-columns: 1fr;
@@ -1711,6 +1837,14 @@ figcaption {
 }
 
 @media (max-width: 768px) {
+  .age-gate {
+    padding: 16px;
+  }
+
+  .age-gate-main {
+    padding: 30px 24px;
+  }
+
   .contact-center h2,
   .newsletter-copy h2 {
     font-size: 1.25rem;
