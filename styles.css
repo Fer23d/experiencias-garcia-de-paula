@@ -1593,6 +1593,7 @@ figcaption {
   display: flex;
   justify-content: center;
   gap: 12px;
+  transform: translateX(-20px);
 }
 
 .newsletter-socials a {
@@ -1835,6 +1836,10 @@ body.age-gate-open {
   .newsletter-inner {
     grid-template-columns: 1fr;
     gap: 24px;
+  }
+
+  .newsletter-socials {
+    transform: none;
   }
 }
 
