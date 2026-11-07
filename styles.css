@@ -1526,7 +1526,7 @@ figcaption {
 
 .newsletter-inner {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: minmax(280px, 1.1fr) minmax(120px, .45fr) minmax(420px, 1.7fr);
   align-items: center;
   justify-items: center;
   gap: 40px;
@@ -1537,14 +1537,14 @@ figcaption {
 .footer-contact-column {
   min-width: 0;
   width: 100%;
-  text-align: center;
+  text-align: left;
 }
 
 .contact-center {
   color: var(--vinho-900);
   font-family: Arial, Helvetica, sans-serif;
   letter-spacing: 0;
-  text-align: center;
+  text-align: left;
 }
 
 .contact-center h2 {
@@ -1563,7 +1563,7 @@ figcaption {
   align-items: flex-start;
   gap: 14px;
   width: fit-content;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
