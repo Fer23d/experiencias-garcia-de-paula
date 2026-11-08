@@ -868,35 +868,8 @@ figcaption {
   transition: transform .7s ease;
 }
 
-.wine-product-media {
-  position: relative;
-  aspect-ratio: 4 / 5;
-}
-
-.wine-product-media img {
-  position: absolute;
-  top: 50%;
-  width: auto;
-  max-width: none;
-  height: 200%;
-  aspect-ratio: auto;
-  transform: translateY(-50%);
-}
-
-.wine-product-media-right img {
-  right: 0;
-}
-
-.wine-product-media-left img {
-  left: 0;
-}
-
 .wine-boutique-card:hover .wine-boutique-media img {
   transform: scale(1.025);
-}
-
-.wine-boutique-card:hover .wine-product-media img {
-  transform: translateY(-50%) scale(1.025);
 }
 
 .wine-boutique-copy {
