@@ -15,6 +15,10 @@ function getNewsletterFrame() {
   return frame;
 }
 
+// Cria o destino antes de qualquer clique para que o navegador mantenha a
+// resposta do Brevo dentro do site.
+getNewsletterFrame();
+
 document.querySelectorAll(".newsletter-form").forEach(function (form) {
   const status = form.querySelector(".newsletter-status");
   const button = form.querySelector('button[type="submit"]');
