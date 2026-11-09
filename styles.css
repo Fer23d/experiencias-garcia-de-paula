@@ -1633,7 +1633,7 @@ figcaption {
 }
 
 .newsletter-copy h2 {
-  margin: 0 0 24px;
+  margin: 0 0 8px;
   color: var(--vinho-900);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.4rem;
@@ -1642,9 +1642,18 @@ figcaption {
   letter-spacing: 0;
 }
 
+.newsletter-intro {
+  max-width: 520px;
+  margin: 0 auto 18px;
+  color: var(--ink-500);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .92rem;
+  line-height: 1.55;
+}
+
 .newsletter-fields {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 52px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
   gap: 8px;
   align-items: center;
   max-width: 100%;
@@ -1690,21 +1699,57 @@ figcaption {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 52px;
+  min-width: 156px;
   height: 52px;
-  padding: 0;
+  padding: 0 18px;
   border: 1px solid var(--vinho-900);
-  border-radius: 50%;
+  border-radius: 28px;
   background: var(--vinho-900);
   color: var(--paper-000);
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem;
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .05em;
+  text-transform: uppercase;
   cursor: pointer;
 }
 
 .newsletter-fields button:hover {
   background: var(--vinho-500);
   border-color: var(--vinho-500);
+}
+
+.newsletter-fields button:disabled {
+  cursor: wait;
+  opacity: .7;
+}
+
+.newsletter-consent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 8px;
+  max-width: 590px;
+  margin: 14px auto 0;
+  color: var(--ink-500);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .78rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.newsletter-consent input {
+  flex: 0 0 15px;
+  width: 15px;
+  height: 15px;
+  margin: 3px 0 0;
+  accent-color: var(--vinho-500);
+}
+
+.newsletter-consent a {
+  color: var(--vinho-500);
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .newsletter-band :focus-visible {
@@ -1883,11 +1928,15 @@ body.age-gate-open {
   }
 
   .newsletter-fields {
-    grid-template-columns: minmax(0, 1fr) 52px;
+    grid-template-columns: 1fr;
   }
 
   .newsletter-field:first-child {
-    grid-column: 1 / -1;
+    grid-column: auto;
+  }
+
+  .newsletter-fields button {
+    width: 100%;
   }
 }
 
