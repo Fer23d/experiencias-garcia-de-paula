@@ -36,7 +36,9 @@ function submitToBrevo(form) {
 
   document.body.appendChild(submission);
   submission.submit();
-  submission.remove();
+  window.setTimeout(function () {
+    submission.remove();
+  }, 2000);
 }
 
 document.querySelectorAll(".newsletter-form").forEach(function (form) {
