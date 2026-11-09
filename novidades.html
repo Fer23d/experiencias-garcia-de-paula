@@ -104,20 +104,22 @@
       </nav>
       <div class="newsletter-copy">
         <h2 id="newsletter-title">Receba novidades e promoções</h2>
-        <form class="newsletter-form" aria-labelledby="newsletter-title" aria-describedby="newsletter-status">
+        <form class="newsletter-form" action="https://2c1c5a8c.sibforms.com/serve/MUIFAJRMcMGJ-GAvI3ECC6drOoNxJEgK9qt8hCymYUfMyjWZ-bXmHk2YFu61O6en5gj6MHwuBuhWPABOZkeALb2KTxz-3UhhvwI5OUXnVjm-2LFFIs42VeJDVhxkMABABueW3m9yfiMwldK6HDfGlfngU7O6X8wacxX1-l46--XD59Zod_-JB1SucmU27HUag91t5PujcR4Av4Iv1Q==" method="post" aria-labelledby="newsletter-title" aria-describedby="newsletter-status">
           <div class="newsletter-fields">
             <label class="newsletter-field">
               <span class="newsletter-label">Seu nome</span>
-              <input name="name" type="text" placeholder="Seu nome" autocomplete="given-name" maxlength="100" required>
+              <input name="FIRSTNAME" type="text" placeholder="Seu nome" autocomplete="given-name" maxlength="100" required>
             </label>
             <label class="newsletter-field">
               <span class="newsletter-label">Seu e-mail</span>
-              <input name="email" type="email" placeholder="Seu e-mail" autocomplete="email" maxlength="254" required>
+              <input name="EMAIL" type="email" placeholder="Seu e-mail" autocomplete="email" maxlength="254" required>
             </label>
             <button type="submit" aria-label="Cadastrar para receber novidades">OK</button>
           </div>
+          <input type="text" name="email_address_check" value="" class="newsletter-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="hidden" name="locale" value="pt">
           <p class="newsletter-status" id="newsletter-status" role="status" aria-live="polite"></p>
-          <noscript><p class="newsletter-status">O cadastro de novidades estará disponível em breve.</p></noscript>
+          <noscript><p class="newsletter-status">Seu cadastro será processado pelo Brevo.</p></noscript>
         </form>
       </div>
     </div>
