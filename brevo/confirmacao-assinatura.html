@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="x-apple-disable-message-reformatting">
+  <meta name="color-scheme" content="light">
+  <meta name="supported-color-schemes" content="light">
+  <title>Confirme sua assinatura | Garcia de Paula</title>
+  <style>
+    @font-face {
+      font-family: "Rizoma";
+      src: url("https://fer23d.github.io/experiencias-garcia-de-paula/assets/fonts/RizomaS-ExtraLight.ttf") format("truetype");
+      font-weight: 200;
+    }
+    @font-face {
+      font-family: "Rizoma";
+      src: url("https://fer23d.github.io/experiencias-garcia-de-paula/assets/fonts/RizomaS-Medium.ttf") format("truetype");
+      font-weight: 500;
+    }
+    body { margin: 0; padding: 0; background: #F4EEE7; }
+    a { color: #6B242D; }
+    .btn:hover { background: #A93A46 !important; border-color: #A93A46 !important; }
+    @media (max-width: 620px) {
+      .container { width: 100% !important; }
+      .pad { padding-left: 28px !important; padding-right: 28px !important; }
+      .title { font-size: 30px !important; line-height: 36px !important; }
+    }
+  </style>
+</head>
+<body style="margin:0;padding:0;background:#F4EEE7;">
+  <!-- Pré-cabeçalho (texto exibido na caixa de entrada) -->
+  <div style="display:none;max-height:0;overflow:hidden;opacity:0;color:#F4EEE7;font-size:1px;line-height:1px;">
+    Falta só um clique para receber novidades, lançamentos e convites da Vinícola Garcia de Paula.
+  </div>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#F4EEE7;">
+    <tr>
+      <td align="center" style="padding:32px 12px;">
+
+        <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px;max-width:600px;background:#FBF8F4;border:1px solid #E6DDD3;">
+
+          <!-- Cabeçalho vinho com logo -->
+          <tr>
+            <td align="center" style="background:#4E1A21;padding:30px 24px 26px;">
+              <a href="https://fer23d.github.io/experiencias-garcia-de-paula/" style="text-decoration:none;">
+                <img src="https://fer23d.github.io/experiencias-garcia-de-paula/assets/logo-full-branca.png" width="220" alt="Vinícola Garcia de Paula" style="display:block;width:220px;max-width:220px;height:auto;border:0;">
+              </a>
+            </td>
+          </tr>
+
+          <!-- Foto da propriedade -->
+          <tr>
+            <td style="padding:0;line-height:0;font-size:0;">
+              <img src="https://fer23d.github.io/experiencias-garcia-de-paula/assets/photos/estate-drone-peak-wide.jpg" width="600" alt="Vinhedos da Garcia de Paula na Serra da Ibitipoca" style="display:block;width:100%;max-width:600px;height:auto;border:0;">
+            </td>
+          </tr>
+
+          <!-- Conteúdo -->
+          <tr>
+            <td class="pad" style="padding:44px 56px 12px;font-family:'Rizoma',Georgia,'Times New Roman',serif;color:#2E2A29;">
+              <p style="margin:0 0 14px;font-size:12px;line-height:18px;letter-spacing:3px;text-transform:uppercase;color:#A93A46;font-weight:500;">
+                Lima Duarte · Serra da Ibitipoca · MG
+              </p>
+              <h1 class="title" style="margin:0 0 20px;font-family:'Rizoma',Georgia,'Times New Roman',serif;font-size:36px;line-height:42px;font-weight:200;color:#4E1A21;">
+                Falta só um passo
+              </h1>
+              <p style="margin:0 0 16px;font-size:17px;line-height:28px;font-weight:200;color:#2E2A29;">
+                Obrigado pelo interesse em acompanhar a Vinícola Garcia de Paula.
+              </p>
+              <p style="margin:0 0 30px;font-size:17px;line-height:28px;font-weight:200;color:#2E2A29;">
+                Para começar a receber novos vinhos, experiências na Serra da Ibitipoca e convites especiais, confirme seu e-mail no botão abaixo.
+              </p>
+            </td>
+          </tr>
+
+          <!-- Botão de confirmação (link de double opt-in do Brevo) -->
+          <tr>
+            <td align="center" class="pad" style="padding:0 56px 34px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td align="center" bgcolor="#4E1A21" style="border-radius:28px;">
+                    <a class="btn" href="{{ doubleoptin }}" target="_blank" style="display:inline-block;padding:16px 38px;border:1px solid #4E1A21;border-radius:28px;background:#4E1A21;color:#FFFFFF;font-family:'Rizoma',Georgia,'Times New Roman',serif;font-size:16px;line-height:20px;font-weight:500;letter-spacing:1px;text-decoration:none;">
+                      Confirmar minha assinatura
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pad" style="padding:0 56px 40px;font-family:'Rizoma',Georgia,'Times New Roman',serif;">
+              <p style="margin:0 0 10px;font-size:14px;line-height:22px;font-weight:200;color:#5A5350;">
+                Se o botão não funcionar, copie e cole este endereço no navegador:
+              </p>
+              <p style="margin:0;font-size:13px;line-height:20px;word-break:break-all;">
+                <a href="{{ doubleoptin }}" style="color:#6B242D;">{{ doubleoptin }}</a>
+              </p>
+            </td>
+          </tr>
+
+          <!-- Divisória -->
+          <tr>
+            <td class="pad" style="padding:0 56px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr><td style="border-top:1px solid #E6DDD3;font-size:0;line-height:0;height:1px;">&nbsp;</td></tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pad" style="padding:24px 56px 36px;font-family:'Rizoma',Georgia,'Times New Roman',serif;">
+              <p style="margin:0;font-size:13px;line-height:21px;font-weight:200;color:#5A5350;">
+                Não pediu para receber nossas novidades? É só ignorar este e-mail. Você não será inscrito sem confirmar.
+              </p>
+            </td>
+          </tr>
+
+          <!-- Rodapé -->
+          <tr>
+            <td align="center" style="background:#2a1215;padding:28px 24px;font-family:'Rizoma',Georgia,'Times New Roman',serif;">
+              <img src="https://fer23d.github.io/experiencias-garcia-de-paula/assets/logo-symbol-branca.png" width="40" alt="" style="display:block;width:40px;height:auto;border:0;margin:0 auto 14px;">
+              <p style="margin:0 0 8px;font-size:13px;line-height:20px;color:#F4EEE7;font-weight:200;">
+                Experiências Garcia de Paula · Serra da Ibitipoca, Minas Gerais
+              </p>
+              <p style="margin:0;font-size:12px;line-height:20px;">
+                <a href="https://fer23d.github.io/experiencias-garcia-de-paula/" style="color:#7DC7BE;text-decoration:none;">Visite o site</a>
+                <span style="color:#7a5a5e;">&nbsp;·&nbsp;</span>
+                <a href="https://www.instagram.com/vinicolagarciadepaula/" style="color:#7DC7BE;text-decoration:none;">Instagram</a>
+                <span style="color:#7a5a5e;">&nbsp;·&nbsp;</span>
+                <a href="https://fer23d.github.io/experiencias-garcia-de-paula/privacidade.html" style="color:#7DC7BE;text-decoration:none;">Privacidade</a>
+              </p>
+              <p style="margin:12px 0 0;font-size:11px;line-height:18px;color:#B9A9A6;font-weight:200;">
+                Conteúdo destinado a maiores de 18 anos. Aprecie com moderação.
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
