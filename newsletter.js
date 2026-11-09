@@ -16,29 +16,12 @@ function getNewsletterFrame() {
 }
 
 function submitToBrevo(form) {
-  const submission = document.createElement("form");
-  const fieldNames = ["EMAIL", "email_address_check", "locale", "html_type"];
+  const frame = getNewsletterFrame();
 
-  submission.method = "post";
-  submission.action = form.action;
-  submission.target = newsletterFrameName;
-  submission.hidden = true;
-
-  fieldNames.forEach(function (fieldName) {
-    const source = form.elements.namedItem(fieldName);
-    const field = document.createElement("input");
-
-    field.type = "hidden";
-    field.name = fieldName;
-    field.value = source ? source.value : "";
-    submission.appendChild(field);
-  });
-
-  document.body.appendChild(submission);
-  submission.submit();
-  window.setTimeout(function () {
-    submission.remove();
-  }, 2000);
+  // Envia o próprio formulário que contém os campos oficiais fornecidos pelo Brevo.
+  // Assim não há reconstrução nem remoção de elementos durante a requisição.
+  form.target = frame.name;
+  form.submit();
 }
 
 document.querySelectorAll(".newsletter-form").forEach(function (form) {
