@@ -15,21 +15,45 @@ function getNewsletterFrame() {
   return frame;
 }
 
+function submitToBrevo(form) {
+  const submission = document.createElement("form");
+  const fieldNames = ["EMAIL", "email_address_check", "locale", "html_type"];
+
+  submission.method = "post";
+  submission.action = form.action;
+  submission.target = newsletterFrameName;
+  submission.hidden = true;
+
+  fieldNames.forEach(function (fieldName) {
+    const source = form.elements.namedItem(fieldName);
+    const field = document.createElement("input");
+
+    field.type = "hidden";
+    field.name = fieldName;
+    field.value = source ? source.value : "";
+    submission.appendChild(field);
+  });
+
+  document.body.appendChild(submission);
+  submission.submit();
+  submission.remove();
+}
+
 document.querySelectorAll(".newsletter-form").forEach(function (form) {
   const status = form.querySelector(".newsletter-status");
   const button = form.querySelector('button[type="submit"]');
 
   form.addEventListener("submit", function (event) {
-    const name = form.elements.namedItem("FIRSTNAME");
+    const name = form.querySelector("[data-newsletter-name]");
 
     if (name) name.value = name.value.trim();
+    event.preventDefault();
     if (!form.reportValidity()) {
-      event.preventDefault();
       return;
     }
 
     getNewsletterFrame();
-    form.target = newsletterFrameName;
+    submitToBrevo(form);
     status.textContent = "Enviando seu cadastro ao Brevo…";
 
     window.setTimeout(function () {
